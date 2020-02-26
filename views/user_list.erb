@@ -1,0 +1,14 @@
+<!--which displays a list of users and their emails.  It should also have links for /new and /delete-->
+
+<ul>
+    <% @users.each do |e| %>
+    <!--<li><#%= e.id.to_s + " " + e.name + " " + e.email %></li>-->
+    <li>ID Number: <%= e.id.to_s %></li>
+    <li>Name: <%= e.name %></li>
+    <li>Email: <%= e.email %></li>
+    <br/>
+    <% end %>
+</ul>
+
+<a href="/new">Add new user</a><br/><br/>
+<a href="/remove">Delete a user</a><br/>
