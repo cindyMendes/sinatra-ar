@@ -1,8 +1,10 @@
+
 require "sinatra"
 require "sinatra/reloader"
 require "sinatra/activerecord"
-require './models/user'
-ActiveRecord::Base.establish_connection(adapter: "sqlite3", database: "mydb.db")
+set :database, { adapter: "sqlite3", database: "mydb.db" }
+require "./models/user"
+
 
 
 get '/' do 
